@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        startNewGame()
     }
     override func didReceiveMemoryWarning(){
         super.didReceiveMemoryWarning()
@@ -48,14 +49,14 @@ class ViewController: UIViewController {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "O.K", style: .default, handler: nil)
+        let action = UIAlertAction(title: "O.K", style: .default, handler: {_ in self.startNewRound()})
         
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
         
-        startNewRound()
-        
+       // startNewRound()
+        //startNewGame(0)
     }
     
     
@@ -64,6 +65,11 @@ class ViewController: UIViewController {
         print(" The value of the slider is now:\(currentValue)")
     }
     
+    @IBAction func startNewGame() {
+        score = 0
+        round = 0
+        startNewRound()
+    }
     func startNewRound(){
         round += 1
         targetValue = Int.random(in:1...100)
