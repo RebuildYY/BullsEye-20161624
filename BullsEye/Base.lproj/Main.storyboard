@@ -152,8 +152,8 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ti9-5o-Osf">
-                                                                <rect key="frame" x="62" y="36" width="31.5" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ti9-5o-Osf">
+                                                                <rect key="frame" x="74" y="36.5" width="31.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -208,6 +208,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="roundLabel" destination="ti9-5o-Osf" id="aUm-ex-zPI"/>
                         <outlet property="scoreLabel" destination="guX-l4-eEc" id="7JQ-Ut-Tic"/>
                         <outlet property="slider" destination="ySh-rj-ryo" id="JyM-Le-i2H"/>
                         <outlet property="targetLabel" destination="JaY-To-DgI" id="u0R-TK-1zB"/>
