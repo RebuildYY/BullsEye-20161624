@@ -239,25 +239,29 @@
                                     <action selector="close:" destination="dHc-5y-QSN" eventType="touchUpInside" id="Tuv-Vg-LZu"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uIP-QT-pbx">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tt8-F5-PAV">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="317"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="p4t-aX-W8P" firstAttribute="trailing" secondItem="uIP-QT-pbx" secondAttribute="trailing" id="Z4e-Gw-nL1"/>
+                            <constraint firstItem="Tt8-F5-PAV" firstAttribute="top" secondItem="p4t-aX-W8P" secondAttribute="top" id="XoQ-2e-L3H"/>
                             <constraint firstItem="Q47-Lc-TRi" firstAttribute="centerX" secondItem="h0k-S9-rWQ" secondAttribute="centerX" id="cNZ-mf-cAN"/>
                             <constraint firstItem="p4t-aX-W8P" firstAttribute="bottom" secondItem="Q47-Lc-TRi" secondAttribute="bottom" constant="20" id="dWc-eZ-THf"/>
-                            <constraint firstItem="Q47-Lc-TRi" firstAttribute="top" secondItem="uIP-QT-pbx" secondAttribute="bottom" constant="8" id="dgM-F9-do2"/>
-                            <constraint firstItem="uIP-QT-pbx" firstAttribute="top" secondItem="p4t-aX-W8P" secondAttribute="top" id="j2B-Fb-NwU"/>
-                            <constraint firstItem="uIP-QT-pbx" firstAttribute="leading" secondItem="p4t-aX-W8P" secondAttribute="leading" id="vCh-MT-fpZ"/>
+                            <constraint firstItem="Q47-Lc-TRi" firstAttribute="top" secondItem="Tt8-F5-PAV" secondAttribute="bottom" constant="8" id="e02-Y3-dxT"/>
+                            <constraint firstItem="p4t-aX-W8P" firstAttribute="trailing" secondItem="Tt8-F5-PAV" secondAttribute="trailing" id="r8c-8T-ud3"/>
+                            <constraint firstItem="Tt8-F5-PAV" firstAttribute="leading" secondItem="p4t-aX-W8P" secondAttribute="leading" id="zdb-t6-mij"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="p4t-aX-W8P"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="Tt8-F5-PAV" id="IZ1-Ny-bxb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDm-UY-DPe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
