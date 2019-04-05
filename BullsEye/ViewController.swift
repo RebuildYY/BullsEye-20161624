@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         }
         
         score += points
-        round += 1
+       // round += 1
         
         let message = "You scored \(points) points"
         
